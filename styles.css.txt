@@ -1,0 +1,104 @@
+/* Testimonial Section */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+}
+
+.testimonials .section-title h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 20px;
+}
+
+.portfolio .section-title h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.portfolio-item {
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Social Media Section */
+.social-media {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #00aaff;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
