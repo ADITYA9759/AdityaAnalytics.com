@@ -62,6 +62,18 @@
     height: auto;
 }
 
+.portfolio-item a {
+    display: block;
+    margin-top: 10px;
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline;
+}
+
 /* Social Media Section */
 .social-media {
     background-color: #333;
