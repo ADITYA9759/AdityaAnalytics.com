@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
-    link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -16,19 +16,32 @@
 </head>
 <body>
 
-    <!-- Testimonial Section -->
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#social-media">Social Media</a>
+            <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- Typing Animation -->
+    <h1 id="typing-text"></h1>
+
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="section-title">
             <h2>What Our Clients Say</h2>
         </div>
         <div class="testimonial-cards">
-            <div class="testimonial-card">
-                <p>"This company provided the best services for our website. Highly recommend!"</p>
+            <div class="testimonial-card" data-aos="fade-up">
+                <p>"Great service, highly recommend!"</p>
                 <h4>John Doe</h4>
                 <p>CEO, Company X</p>
             </div>
-            <div class="testimonial-card">
-                <p>"A fantastic team that understood our needs and delivered on time. Will hire again!"</p>
+            <div class="testimonial-card" data-aos="fade-up">
+                <p>"Fantastic experience!"</p>
                 <h4>Jane Smith</h4>
                 <p>Marketing Director, Company Y</p>
             </div>
@@ -37,21 +50,17 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-        <div data-aos="fade-up">
+        <div class="section-title">
             <h2>Our Work</h2>
         </div>
         <div class="portfolio-gallery">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up">
                 <img src="https://via.placeholder.com/300" alt="Project 1">
                 <h4>Project One</h4>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up">
                 <img src="https://via.placeholder.com/300" alt="Project 2">
                 <h4>Project Two</h4>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Project 3">
-                <h4>Project Three</h4>
             </div>
         </div>
     </section>
@@ -65,22 +74,15 @@
         </div>
     </section>
 
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/1234567890" class="whatsapp-button">Chat on WhatsApp</a>
+
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Your Company. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#home">Home</a> | 
-                <a href="#about">About Us</a> |
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
