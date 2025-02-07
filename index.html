@@ -9,6 +9,57 @@
 </head>
 <body>
 
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Analyzer & Visualizer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Upload CSV File</h2>
+    <input type="file" id="csvFile" />
+    <button onclick="uploadCSV()">Analyze</button>
+
+    <h3>Summary:</h3>
+    <pre id="output"></pre>
+
+    <h3>Data Visualization:</h3>
+    <canvas id="chart"></canvas>
+
+    <script>
+        function uploadCSV() {
+            let fileInput = document.getElementById("csvFile").files[0];
+            let formData = new FormData();
+            formData.append("file", fileInput);
+
+            fetch("http://127.0.0.1:5000/upload", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+
+                let keys = Object.keys(data.description["mean"]);
+                let values = Object.values(data.description["mean"]);
+
+                let ctx = document.getElementById("chart").getContext("2d");
+                new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                        labels: keys,
+                        datasets: [{
+                            label: "Mean Values",
+                            data: values,
+                            backgroundColor: "blue"
+                        }]
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+
     <!-- Testimonial Section -->
     <section id="testimonials" class="testimonials">
         <div class="section-title">
