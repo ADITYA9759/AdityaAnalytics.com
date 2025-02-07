@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import pandas as pd
 from flask_cors import CORS
 
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)  # React/JS फ्रंटएंड से API एक्सेस के लिए
 
 @app.route('/upload', methods=['POST'])
@@ -23,5 +23,5 @@ def upload_file():
     
     return jsonify(summary)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
